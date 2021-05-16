@@ -6,11 +6,11 @@ Projet système embarqué - ENSTA Bretagne
 # MISE EN PLACE DU SYSTÈME EMBARQUÉ :
 
 Pour autoriser l’accès de root vers user pour un dossier : 
-
+...
 ls -lsa (visualiser l’appartenance des dossiers à root ou user)
 chown -R user drivers
 su user (changement d’utilisateur vers user)
-
+...
 
 
 ## Principe de cross-compilation :
