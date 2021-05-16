@@ -3,7 +3,7 @@ Projet système embarqué - ENSTA Bretagne
 
 
 
-MISE EN PLACE DU SYSTÈME EMBARQUÉ :
+# MISE EN PLACE DU SYSTÈME EMBARQUÉ :
 
 Pour autoriser l’accès de root vers user pour un dossier : 
 
@@ -13,7 +13,7 @@ su user (changement d’utilisateur vers user)
 
 
 
-Principe de cross-compilation :
+## Principe de cross-compilation :
 
 - écrire ses programmes sur IDE
 - passer les script sur docker
@@ -29,7 +29,7 @@ docker ps -a
 docker start ID_number
 docker exec -it  ID_number /bin/bash
 
-Comment utiliser cp ? 
+## Comment utiliser cp ? 
 
 le cp commande peut être utilisée pour copier des fichiers.
 Un fichier spécifique peut être copié dans le conteneur comme:
@@ -56,7 +56,7 @@ Créer le binaire à partir des fichiers .c sur docker :
 
 
 
-FONCTIONNEMENT DU SYSTÈME EMBARQUÉ :
+## FONCTIONNEMENT DU SYSTÈME EMBARQUÉ :
 
 1) Brancher les capteurs en respectant la norme des GPIO
 2) Brancher la raspberry en éthernet
