@@ -6,11 +6,11 @@ Projet système embarqué - ENSTA Bretagne
 ## MISE EN PLACE DU SYSTÈME EMBARQUÉ :
 
 Pour autoriser l’accès de root vers user pour un dossier : 
-'''python
+````
 $ ls -lsa (visualiser l’appartenance des dossiers à root ou user)
 $ chown -R user drivers
 $ su user (changement d’utilisateur vers user)
-'''
+````
 
 
 ## Principe de cross-compilation :
@@ -24,31 +24,33 @@ $ su user (changement d’utilisateur vers user)
 
 
 Revenir sur docker existant :
-
+````
 docker ps -a
 docker start ID_number
 docker exec -it  ID_number /bin/bash
+````
 
 ## Comment utiliser cp ? 
 
 le cp commande peut être utilisée pour copier des fichiers.
 Un fichier spécifique peut être copié dans le conteneur comme:
-
-docker cp linux_userspace.c mycontainer:/ linux_userspace.c
-
+````
+$ docker cp linux_userspace.c mycontainer:/ linux_userspace.c
+````
 Un fichier spécifique peut être copié DU conteneur comme:
-
-docker cp mycontainer:/ linux_userspace.c  linux_userspace.c
-
+````
+$ docker cp mycontainer:/ linux_userspace.c  linux_userspace.c
+````
 Plusieurs fichiers contenus dans le dossier srcpeuvent être copiés dans le targetdossier en utilisant:
-
-docker cp src/. mycontainer:/target
-docker cp mycontainer:/src/. Target
+````
+$ docker cp src/. mycontainer:/target
+$ docker cp mycontainer:/src/. Target
+````
 
 Copier un dossier local vers un ssh :
-
-scp -r BME280_driver/ user@172.20.11.253:/home/user/drivers
-
+````
+$ scp -r BME280_driver/ user@172.20.11.253:/home/user/drivers
+````
 
 Créer le binaire à partir des fichiers .c sur docker :
 
